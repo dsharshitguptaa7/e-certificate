@@ -1,0 +1,245 @@
+/* 🌌 AI DARK THEME */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at center, #000428, #004e92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+/* 🤖 CONTAINER */
+.container {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 520px;
+    text-align: center;
+
+    border: 1px solid rgba(0,255,255,0.4);
+    box-shadow: 0 0 20px rgba(0,255,255,0.2),
+        0 0 60px rgba(0,255,255,0.1),
+        inset 0 0 20px rgba(0,255,255,0.05);
+
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ⚡ LOGOS */
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 65px;
+    width: 65px;
+    object-fit: contain;
+}
+
+/* 🔷 HEADER */
+header {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* 🧠 TITLE */
+h1 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin: 15px 0;
+
+    background: linear-gradient(90deg, #00f2ff, #8a2be2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 6px rgba(0,255,255,0.4),
+        
+}
+
+/* 🧾 ORGANIZER */
+.organizer {
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background: rgba(0,255,255,0.1);
+    border: 1px solid rgba(0,255,255,0.3);
+    box-shadow: 0 0 20px rgba(0,255,255,0.3);
+
+    font-weight: bold;
+    color: #00eaff;
+}
+
+/* 🧩 FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* 🔤 INPUT */
+input {
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,255,255,0.3);
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00eaff;
+    box-shadow: 0 0 10px #00eaff;
+}
+
+/* 🚀 BUTTON */
+button {
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+
+    background: linear-gradient(135deg, #00f2ff, #8a2be2);
+    box-shadow: 0 0 15px rgba(0,255,255,0.6);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+    box-shadow: 0 0 10px rgba(0,255,255,0.5),
+        0 0 20px rgba(138,43,226,0.4);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00eaff,
+        0 0 40px #8a2be2;
+}
+
+/* 💬 MESSAGE */
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #00eaff;
+}
+
+/* 🎉 RESULT CARD */
+#card {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,255,255,0.2);
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.center-title {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    background: linear-gradient(90deg, #00f2ff, #8a2be2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-align: center;
+}
+
+/* ✨ ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* LOGOS LAYOUT */
+/* LOGOS LAYOUT */
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* CENTER TITLE CONTAINER */
+.center-title {
+    position: relative;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+
+    padding: 6px 14px;
+    border-radius: 20px;
+
+    background: rgba(0,255,255,0.08);
+    border: 1px solid rgba(0,255,255,0.3);
+
+    box-shadow: 0 0 15px rgba(0,255,255,0.2);
+}
+
+/* GRADIENT TEXT */
+.center-title span {
+    background: linear-gradient(90deg, #00f2ff, #8a2be2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 🔥 UNDERLINE ANIMATION */
+.center-title::after {
+    content: '';
+    position: absolute;
+    left: 10%;
+    bottom: -5px;
+    width: 80%;
+    height: 2px;
+
+    background: linear-gradient(90deg, #00f2ff, #8a2be2);
+
+    animation: glowLine 2s infinite alternate;
+}
+
+/* ✨ PULSE GLOW */
+@keyframes glowLine {
+    from {
+        opacity: 0.4;
+        transform: scaleX(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+/* 🔥 HOVER EFFECT */
+.center-title:hover {
+    box-shadow:
+        0 0 20px rgba(0,255,255,0.4),
+        0 0 30px rgba(138,43,226,0.3);
+    transform: scale(1.05);
+    transition: 0.3s;
+}

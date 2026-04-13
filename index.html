@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="logos">
+        <img src="university-logo.png" class="logo">
+        <div class="center-title">
+        <span>E-Certificate</span>
+    </div>
+        <img src="naac-logo.png" class="logo">
+    </div>
+
+    <header>
+        <h2>CHHATRAPATI SHAHU JI MAHARAJ UNIVERSITY, KANPUR</h2>
+    </header>
+
+    <!-- 🔥 Typing Effect Title -->
+    <h1 id="typing-title"></h1>
+
+    <p class="organizer">
+  <strong>Organized by: School of Basic Sciences</strong>
+</p>
+
+    <!-- FORM (CSS compatible) -->
+    <form id="certificateForm">
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <button type="button" onclick="fetchUser()">Check Certificate</button>
+    </form>
+
+    <p id="message"></p>
+
+    <!-- RESULT CARD -->
+    <div id="card" style="display:none;">
+        <h3 id="username"></h3>
+        <button onclick="downloadCert()">Download Certificate</button>
+    </div>
+
+    <footer class="footer">
+        © 2026 Harshit Gupta. All rights reserved.
+    </footer>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
