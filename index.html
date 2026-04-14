@@ -1,60 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificate System</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<title>AI Workshop</title>
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<div class="container">
+<div class="header">
+    <img src="university-logo.png" class="logo left-logo">
 
-    <div class="logos">
-        <img src="university-logo.png" class="logo">
-        <div class="center-title">
-        <span>E-Certificate</span>
-    </div>
-        <img src="naac-logo.png" class="logo">
-    </div>
+    <h2>E-Certificate Portal</h2>
 
-    <header>
-        <h2>CHHATRAPATI SHAHU JI MAHARAJ UNIVERSITY, KANPUR</h2>
-    </header>
+    <img src="naac-logo.png" class="logo right-logo">
+</div>
 
-    <!-- 🔥 Typing Effect Title -->
-    <h1 id="typing-title"></h1>
+<div class="hero">
 
-    <p class="organizer">
-  <strong>Organized by: School of Basic Sciences</strong>
-</p>
+    <h2 class="university">
+        CHHATRAPATI SHAHU JI MAHARAJ UNIVERSITY, KANPUR
+    </h2>
 
-    <!-- FORM (CSS compatible) -->
-    <form id="certificateForm">
-        <label>Name:</label>
-        <input type="text" id="name" placeholder="Enter your name">
+    <h1 class="workshop-title" id="typing-title"></h1>
 
-        <label>Email:</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
-
-        <button type="button" onclick="fetchUser()">Check Certificate</button>
-    </form>
-
-    <p id="message"></p>
-
-    <!-- RESULT CARD -->
-    <div id="card" style="display:none;">
-        <h3 id="username"></h3>
-        <button onclick="downloadCert()">Download Certificate</button>
-    </div>
-
-    <footer class="footer">
-        © 2026 Harshit Gupta. All rights reserved.
-    </footer>
+    <p class="organizer-line">
+        Organized by <span>School of Basic Sciences</span>
+    </p>
 
 </div>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script src="script.js"></script>
 
+    <!-- TEAM SECTION -->
+    <div class="team-section">
+
+    <h2>Leadership Team</h2>
+
+    <div class="leadership-grid">
+
+        <div class="person">
+            <img src="images/vinay.jpg">
+            <h3>Prof. Vinay Kumar Pathak</h3>
+            <p>Chief Patron</p>
+            <span>Vice Chancellor, CSJMU</span>
+        </div>
+
+        <div class="person">
+            <img src="images/dwivedi.jpeg">
+            <h3>Prof. R.K. Dwivedi</h3>
+            <p>Patron</p>
+            <span>Director SBS</span>
+        </div>
+
+        <div class="person">
+            <img src="images/namita.jpg">
+            <h3>Dr. Namita Tiwari</h3>
+            <p>Co-Patron</p>
+            <span>Dean Research and Development</span>
+        </div>
+
+        <div class="person">
+            <img src="images/anju.jpeg">
+            <h3>Dr. Anju Dixit</h3>
+            <p>Organizing Chair</p>
+            <span>Deputy Director SBS</span>
+        </div>
+
+    </div>
+
+    <h2>Keynote Speakers</h2>
+
+    <div class="grid">
+
+        <div class="person">
+            <img src="images/dharmraj.jpeg">
+            <h3>Dr. Dharm Raj Singh</h3>
+            <p>Assistant Professor</p>
+            <span>Jagatpur PG College, Varanasi</span>
+        </div>
+
+        <div class="person">
+            <img src="images/anubhav.jpeg">
+            <h3>Dr. Anubhav Kumar Prasad</h3>
+            <p>Assistant Professor</p>
+            <span>United Institute of Technology, Naini, Prayagraj</span>
+        </div>
+
+    </div>
+
+    <h2>Coordination Team</h2>
+
+<div class="grid">
+
+    <div class="person">
+        <!-- photo optional -->
+        <img src="images/pathak.jpg">
+        <h3>Dr. P.N. Pathak</h3>
+        <p>Coordinator</p>
+        <span>Department of Mathematics</span>
+    </div>
+
+    <div class="person">
+        <img src="images/sandeep.jpg">
+        <h3>Dr. Sandeep Kumar Porwal</h3>
+        <p>Convener</p>
+        <span>Department of Mathematics</span>
+    </div>
+
+</div>
+
+</div>
+
+    <!-- BROCHURE -->
+    <div class="brochure">
+        <a href="brochure.pdf" download>
+            📄 Download Brochure
+        </a>
+    </div>
+
+    <!-- CERTIFICATE SYSTEM -->
+    <div class="cert-container">
+
+    <h2> Download Your Certificate</h2>
+
+    <div class="form-box">
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <button type="button" onclick="fetchUser()">
+            Get Certificate
+        </button>
+
+        <p id="message"></p>
+
+        <div id="card" style="display:none;">
+            <h3 id="username"></h3>
+            <button onclick="downloadCert()">Download Certificate</button>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

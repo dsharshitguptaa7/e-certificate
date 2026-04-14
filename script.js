@@ -1,16 +1,20 @@
 let currentUser = null;
 
 /* 🔥 Typing Effect */
-const text = "Five Days National Workshop on Artificial Intelligence and It’s Applications with Future Perspectives";
+const text = "Five Days National Workshop on Fundamentals of Artificial Intelligence and Its Applications with Future Perspectives";
+
 let index = 0;
 
 function typeEffect() {
   if (index < text.length) {
     document.getElementById("typing-title").innerHTML += text.charAt(index);
     index++;
-    setTimeout(typeEffect, 40);
+    setTimeout(typeEffect, 70); // speed control
   }
 }
+
+// page load pe run
+window.onload = typeEffect;
 
 function launchConfetti() {
   const duration = 1000;
@@ -35,38 +39,38 @@ window.onload = typeEffect;
 /* 🔥 Certificate Logic */
 async function fetchUser() {
   const email = document.getElementById('email').value.trim().toLowerCase();
-  const name = document.getElementById('name').value;
   const message = document.getElementById('message');
 
-  if (!email) {
-    message.innerText = "⚠️ Please enter email";
-    return;
-  }
-
-  message.innerText = "User not found";
+  message.innerText = "Checking...";
 
   try {
     const res = await fetch('participants.json');
+
+    if (!res.ok) {
+      throw new Error("File not found");
+    }
+
     const data = await res.json();
 
     const user = data.find(p =>
-      p.email.trim().toLowerCase() === email
+      p.email.toLowerCase() === email
     );
 
     if (user) {
-  currentUser = user;
+      document.getElementById('card').style.display = 'block';
+      document.getElementById('username').innerText =
+        `🎉 Welcome ${user.name}`;
 
-  document.getElementById('username').innerText =
-    `🎉 Welcome ${user.name}`;
+      message.innerText = "";  // ✅ error remove
+    } else {
+      message.innerText = "❌ Not registered";
+    }
 
-  document.getElementById('card').style.display = 'block';
-  message.innerText = "✅ Certificate Found!";
-
-  launchConfetti();   // 🔥 ADD THIS LINE
-}
   } catch (err) {
+    console.error(err);
     message.innerText = "⚠️ Error loading data";
   }
+
 }
 
 function downloadCert() {
