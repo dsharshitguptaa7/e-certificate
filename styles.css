@@ -343,7 +343,8 @@ button {
 .tab-btn {
     padding: 10px 20px;
     border: none;
-    background: #ddd;
+    background: #e0e0e0;   /* 🔥 darker than before */
+    color: #333;
     border-radius: 8px;
     cursor: pointer;
 }
