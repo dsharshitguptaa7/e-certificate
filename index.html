@@ -160,30 +160,72 @@
         </a>
     </div>
 
+<div class="tabs">
+    <button class="tab-btn" onclick="showTab('registration')">
+        Registration
+    </button>
+    
+    <button class="tab-btn active" onclick="showTab('certificate')">
+        Download Certificate
+    </button>
+    
+</div>
+
+    <div id="certificate" class="tab-content active">
+
     <!-- CERTIFICATE SYSTEM -->
     <div class="cert-container">
 
-    <h2> Download Your Certificate</h2>
+        
+        <h2> Download Your Certificate</h2>
 
-    <div class="form-box">
-        <input type="text" id="name" placeholder="Enter your name">
-        <input type="email" id="email" placeholder="Enter your email">
+        <div class="form-box">
+            <input type="text" id="name" placeholder="Enter your name">
+            <input type="email" id="email" placeholder="Enter your email">
 
-        <button type="button" onclick="fetchUser()">
-            Get Certificate
-        </button>
+            <button type="button" onclick="fetchUser()">
+                Get Certificate
+            </button>
 
-        <p id="message"></p>
+            <p id="message"></p>
 
-        <div id="card" style="display:none;">
-            <h3 id="username"></h3>
-            <button onclick="downloadCert()">Download Certificate</button>
+            <div id="card" style="display:none;">
+                <h3 id="username"></h3>
+                <button onclick="downloadCert()">Download Certificate</button>
+            </div>
         </div>
+
+    </div>
+
+</div>
+
+<div id="registration" class="tab-content">
+
+    <div class="cert-container">
+
+        <h2> Register for Workshop</h2>
+
+        <!-- Google Form -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScCoATvQkVLTOEAPbs4OysWMNU_vZPtXcpzklrX_5Z7hNzZxQ/viewform"
+           target="_blank"
+           class="register-btn">
+            Register Now
+        </a>
+
+        <!-- QR -->
+        <div class="payment-section">
+            <h3>Scan to Pay</h3>
+            <img src="images/qr.jpeg" alt="QR Code">
+            <p>UPI / GPay / PhonePe</p>
+        </div>
+
     </div>
 
 </div>
 
 </div>
+
+
 
 <script src="script.js"></script>
 </body>
