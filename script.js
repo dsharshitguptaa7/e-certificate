@@ -74,7 +74,22 @@ async function fetchUser() {
 }
 
 function downloadCert() {
-  if (currentUser) {
-    window.open(`certificates/${currentUser.certificateFile}`, '_blank');
-  }
+    const name = document.getElementById("name").value;
+
+    if (!name) {
+        alert("Enter your name first");
+        return;
+    }
+
+    // 🔥 certificate file path
+    const filePath = "certificates/" + name + ".pdf";
+
+    // create download link
+    const link = document.createElement("a");
+    link.href = filePath;
+    link.download = name + ".pdf";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }
