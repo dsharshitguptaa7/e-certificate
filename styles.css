@@ -376,3 +376,12 @@ button {
     width: 180px;
     margin-top: 10px;
 }
+
+#verify {
+    text-align: center;
+}
+#verify h2 {
+    text-align: center;
+    color: red; /* same as download wala */
+    margin-top: 50px;
+}

@@ -147,3 +147,36 @@ function showTab(tab) {
 window.onload = function () {
   typeEffect();
 };
+
+async function verifyCertificate() {
+  const email = document.getElementById("verifyEmail").value.trim().toLowerCase();
+  const msg = document.getElementById("verifyMessage");
+
+  if (!email) {
+    alert("Enter email");
+    return;
+  }
+
+  msg.innerText = "Checking...";
+  msg.style.color = "black";
+
+  try {
+    const res = await fetch("participants.json");
+    const data = await res.json();
+
+    const user = data.find(p => p.email.toLowerCase() === email);
+
+    if (user) {
+      msg.innerText = `✅ Certificate is VALID for ${user.name}`;
+      msg.style.color = "green";
+    } else {
+      msg.innerText = "❌ Certificate NOT FOUND";
+      msg.style.color = "red";
+    }
+
+  } catch (err) {
+    console.error(err);
+    msg.innerText = "⚠️ Error verifying";
+    msg.style.color = "orange";
+  }
+}
