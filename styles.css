@@ -423,7 +423,38 @@ button {
 /* MOBILE */
 @media (max-width: 900px) {
     .layout {
+        display: flex;
+        flex-direction: column;
         grid-template-columns: 1fr;
+    }
+    .sidebar-left{
+        order: 2;
+    }
+    .main-content{
+        order:1;
+    }
+    .sidebar-right{
+        order:3;
+        width: 90%;
+        margin:10px auto;
+    }
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .person{
+        max-width: 90%;
+        margin: auto;
+    }
+    .timeline-card{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .timeline-card{
+        width: 90%;
+    }
+    .timeline-line{
+        display: none;
     }
 }
 .register-btn {
