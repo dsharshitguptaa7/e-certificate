@@ -22,6 +22,8 @@ body {
     background: white;
     padding: 15px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-decoration-color: #D32F2F;
+    color: #000;
 }
 
 .logo {
@@ -412,14 +414,72 @@ button {
     text-align: center;
 }
 
-/* RIGHT */
-.sidebar-right {
+.announcement-box {
+    margin-top: 20px;
     background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
+.announcement-box h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #2b2b88;
+    text-align: center;
+}
+
+/* item */
+.announcement-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    transition: 0.3s;
+}
+
+/* hover effect */
+.announcement-item:hover {
+    transform: translateX(5px);
+    background: #eef2ff;
+}
+
+/* dot */
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* colors */
+.red {
+    background: #e53935;
+}
+
+.blue {
+    background: #1e88e5;
+}
+
+/* urgent highlight */
+.urgent {
+    border-left: 4px solid #e53935;
+}
+
+/* text */
+.announcement-item strong {
+    display: block;
+    font-size: 14px;
+}
+
+.announcement-item p {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+}
 /* MOBILE */
 
 .register-btn {
@@ -586,4 +646,33 @@ button {
     .workshop-title {
         font-size: 18px;
     }
+}
+
+.quick-title {
+    font-weight: 600;
+    color: #333;
+    margin-right: 15px;
+}
+
+.quick-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    padding: 20px 30px;
+    background: white;
+    top: 0;
+    z-index: 100;
+}
+
+/* links */
+.quick-nav a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #2b2b88;
+    font-size: 18px;
+    font-weight: 500;
 }
