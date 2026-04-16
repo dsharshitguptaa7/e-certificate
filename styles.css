@@ -580,3 +580,16 @@ button {
         margin-top: 20px;
     }
 }
+.footer {
+    background: linear-gradient(90deg, #2b2b88, #4a90e2);
+    color: white;
+    text-align: center;
+    padding: 12px 10px;
+    margin-top: 40px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.footer p {
+    margin: 0;
+}
