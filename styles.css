@@ -543,3 +543,47 @@ button {
 .footer p {
     margin: 0;
 }
+
+/* 🔥 MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+
+    .layout {
+        grid-template-columns: 1fr;   /* ek column */
+    }
+
+    .sidebar-left,
+    .sidebar-right {
+        display: none;  /* optional: hide sidebars */
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .timeline-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .timeline-card {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .timeline-line {
+        display: none; /* line hata do mobile me */
+    }
+
+    .cert-container {
+        width: 90%;
+    }
+
+    .university {
+        font-size: 22px;
+    }
+
+    .workshop-title {
+        font-size: 18px;
+    }
+}
